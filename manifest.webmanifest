@@ -1,0 +1,19 @@
+{
+  "name": "RT SMART Offline Premium",
+  "short_name": "RT SMART",
+  "description": "Administrasi RT lokal dengan backup dan pemulihan data",
+  "lang": "id-ID",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7f5",
+  "theme_color": "#087e60",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

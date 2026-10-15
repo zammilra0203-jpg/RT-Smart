@@ -1,0 +1,19 @@
+RT SMART OFFLINE — PETUNJUK SINGKAT
+
+ISI PAKET
+- index.html: aplikasi RT SMART yang disederhanakan
+- sw.js: cache aplikasi agar bisa dibuka offline setelah pertama kali dimuat
+- manifest.webmanifest dan icon.svg: dukungan pemasangan sebagai aplikasi web
+
+PENTING
+1. Jangan hapus file lama atau data browser sebelum backup baru berhasil dibuat dan diuji.
+2. Untuk menjaga data yang sudah ada pada situs GitHub Pages, pertahankan origin/domain dan nama database aplikasi. File ini tetap menggunakan database `rt-smart-local-v3`.
+3. Service worker hanya bekerja pada HTTPS/localhost. Jika aplikasi dipakai lewat GitHub Pages, unggah file paket ke lokasi yang sama dengan index.html yang lama (jangan ubah domain/path utama), lalu buka online sekali dan muat ulang.
+4. Setelah itu, aplikasi dapat menggunakan cache saat internet tidak tersedia. Uji dengan mematikan internet setelah aplikasi berhasil dimuat.
+5. Untuk pindah ke komputer/HP lain: pada perangkat lama buka Pengaturan > Backup & Pulihkan Data > Unduh Backup Seluruh Data. Salin file JSON ke perangkat baru, buka aplikasi, pilih file pada Impor backup, lalu konfirmasi. Pemulihan akan mengunduh backup keselamatan dari perangkat baru sebelum mengganti data.
+6. Backup JSON berisi data sensitif yang tidak dienkripsi. Simpan dengan aman; jangan kirim ke grup atau publik.
+7. Data browser tidak otomatis ikut pindah ke perangkat lain. Gunakan backup manual.
+8. Publikasi dashboard warga tetap tidak aktif sampai layanan API publikasi yang benar dikonfigurasi. Tidak ada data yang dipublikasikan otomatis oleh paket ini.
+9. `file://` lokal tidak mendukung service worker. Untuk pemakaian offline yang stabil sebagai aplikasi, host di HTTPS (misalnya GitHub Pages) lalu buka online satu kali. Aplikasi tetap menyimpan data secara lokal pada browser/perangkat tersebut.
+
+Paket ini mempertahankan struktur data IndexedDB RT SMART `rt-smart-local-v3` agar dapat memakai data lokal yang sudah ada pada origin yang sama.
